@@ -7,14 +7,14 @@ import './index.css';
 
 //Components
 import App from './App';
-import Name from './components/Name'
+import Paint from './components/Paint'
 
 //Utilities
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Name />
+    <Paint />
   </React.StrictMode>,
   document.getElementById('root')
 );
