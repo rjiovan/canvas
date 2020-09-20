@@ -1,12 +1,20 @@
+//Vendor libraries
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+//Style
 import './index.css';
+
+//Components
 import App from './App';
+import Name from './components/Name'
+
+//Utilities
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Name />
   </React.StrictMode>,
   document.getElementById('root')
 );
