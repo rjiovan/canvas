@@ -1,7 +1,7 @@
 # Canvas
 
 ### Introduction
-This project is an introduce to react hooks
+This project is an introduction to react hooks.
 
 ### User Story
 As user, I want to draw / paint within the browser so I can create a drawing.
