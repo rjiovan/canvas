@@ -5,6 +5,8 @@ import randomColor from 'randomcolor'
 //Components
 import Name from './Name'
 import ColorPicker from './ColorPicker'
+import Canvas from './Canvas'
+import WindowSize from './WindowSize'
 
 export default function Paint() {
     const [colors, setColors] = useState('');
@@ -24,17 +26,26 @@ export default function Paint() {
         })
     }
     return (
-    <header style={{ borderTop: `10px solid ${activeColor}` }}>
         <div className="app">
-        <Name />
+            <header style={{ borderTop: `10px solid ${activeColor}` }}>
+                <div>
+                    <Name />
+                </div>
+                <div style={{ marginTop: 10 }}>
+                    <ColorPicker
+                        colors={colors}
+                        activeColor={activeColor}
+                        setActiveColor={setActiveColor}
+                    />
+                </div>
+            </header>   
+            {activeColor && (
+            <Canvas
+                color={activeColor}
+                height={window.innerHeight}
+                />
+            )}
+            <WindowSize />         
         </div>
-        <div style={{ marginTop: 10 }}>
-            <ColorPicker
-                colors={colors}
-                activeColor={activeColor}
-                setActiveColor={setActiveColor}
-            />
-        </div>
-    </header>
   )
 }
